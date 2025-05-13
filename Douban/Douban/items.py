@@ -9,6 +9,6 @@ import scrapy
 class DoubanItem(scrapy.Item):
     # define the fields for your item here like:
     name = scrapy.Field()
-    date = scrapy.Field()
+    quote = scrapy.Field()
     score= scrapy.Field()
     info = scrapy.Field()

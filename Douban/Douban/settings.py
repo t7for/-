@@ -80,6 +80,8 @@ List_USERAGENT=["Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Ge
 DOWNLOADER_MIDDLEWARES = {
     "Douban.middlewares.RandomUserAgent": 543,
     }
+MONGO_URI ='mongodb://localhost:27017'
+MONGO_DATABASE = 'your_database_name'
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -89,9 +91,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "Douban.pipelines.DoubanPipeline": 300,
-#}
+ITEM_PIPELINES = {
+    "Douban.pipelines.MongoPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
